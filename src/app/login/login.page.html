@@ -4,5 +4,17 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-
+  <ion-list lines="full" class="ion-no-margin ion-no-padding">
+          <ion-item>
+            <ion-label position="stacked">Username<ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="text" oninput="handleFirstNameValue(event)" [(ngModel)]="Username"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Password<ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="password" [(ngModel)]="Password" oninput="handlePasswordValue(event)"></ion-input>
+          </ion-item>
+          <section>
+            <ion-button expand="block" color="dark" (click)="login()">Login</ion-button>
+          </section>
+  </ion-list>
 </ion-content>
